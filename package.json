@@ -1,0 +1,17 @@
+{
+  "name": "react-rollup",
+  "version": "1.0.0",
+  "description": "Basic React application packed using Rollup",
+  "main": "index.js",
+  "repository": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cédric Meuter",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-standalone": "^6.24.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}
