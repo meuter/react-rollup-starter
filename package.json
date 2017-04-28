@@ -5,15 +5,16 @@
   "main": "index.js",
   "repository": {},
   "scripts": {
-    "build": "babel src/main.jsx -o dist/main.bundle.js",
-    "dev": "babel -w src/main.jsx -o dist/main.bundle.js"
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
   },
   "author": "Cédric Meuter",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "rollup": "^0.41.6"
   }
 }
