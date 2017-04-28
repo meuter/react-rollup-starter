@@ -15,7 +15,19 @@
     </body>
 
     <script type="text/babel">
-        ReactDOM.render(<h1>Hello World</h1>, document.getElementById("app-placeholder"));
+ 
+        class HelloWorld extends React.Component {
+
+            displayAlert() {
+                alert("Hello " + this.props.name);
+            }
+
+            render() {
+                return (<h1 onClick={this.displayAlert.bind(this)}>Hello {this.props.name}</h1>)
+            }
+        }
+
+        ReactDOM.render(<HelloWorld name="World"/>, document.getElementById("app-placeholder"));
     </script>
 
 </html>
