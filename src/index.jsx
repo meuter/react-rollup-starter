@@ -11,4 +11,4 @@ class HelloWorld extends React.Component {
     }
 }
 
-ReactDOM.render(<HelloWorld name="World"/>, document.getElementById("app-placeholder"));
+ReactDOM.render(<HelloWorld name="world!"/>, document.getElementById("app-placeholder"));
