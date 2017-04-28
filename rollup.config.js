@@ -3,9 +3,16 @@ import resolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
 import replace from "rollup-plugin-replace";
 import uglify from "rollup-plugin-uglify";
+import serve from "rollup-plugin-serve";
+import livereload from "rollup-plugin-livereload";
 
 const NODE_ENV = process.env.NODE_ENV || "development";
 const PROD     = (NODE_ENV === "production");
+const WATCH    = (process.env.WATCH === "1" || false)
+
+console.log("PROD : ", PROD);
+console.log("WATCH: ", WATCH);
+console.log();
 
 export default {
     entry: "src/main.jsx",
@@ -27,6 +34,13 @@ export default {
             plugins: ["transform-react-jsx"],
             presets: ["es2015-rollup"]
         }),
-        (PROD && uglify())
+        (PROD && uglify()),
+        (WATCH && serve({
+            contentBase: "dist",
+            host: "localhost",
+            port: "4200",
+            open: true
+        })),
+        (WATCH && livereload())
     ]
 }

@@ -7,8 +7,8 @@
   "scripts": {
     "build:dev": "rollup -c",
     "build:prod": "NODE_ENV='production' rollup -c",
-    "watch:prod": "NODE_ENV='production' rollup -c -w",
-    "watch:dev": "rollup -c -w"
+    "watch:dev": "WATCH=1 rollup -c -w",
+    "watch:prod": "WATCH=1 NODE_ENV='production' rollup -c -w"
   },
   "author": "Cédric Meuter",
   "license": "MIT",
@@ -20,8 +20,10 @@
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-livereload": "^0.4.0",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-serve": "^0.3.0",
     "rollup-plugin-uglify": "^1.0.2",
     "rollup-watch": "^3.2.2"
   }
