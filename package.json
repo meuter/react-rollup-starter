@@ -5,8 +5,10 @@
   "main": "index.js",
   "repository": {},
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "build:dev": "rollup -c",
+    "build:prod": "NODE_ENV='production' rollup -c",
+    "watch:prod": "NODE_ENV='production' rollup -c -w",
+    "watch:dev": "rollup -c -w"
   },
   "author": "Cédric Meuter",
   "license": "MIT",
@@ -20,6 +22,7 @@
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-uglify": "^1.0.2",
     "rollup-watch": "^3.2.2"
   }
 }
