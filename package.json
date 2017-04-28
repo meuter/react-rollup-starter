@@ -5,9 +5,8 @@
   "main": "index.js",
   "repository": {},
   "scripts": {
-    "build": "babel src/index.jsx -o dist/index.bundle.js",
-    "dev": "babel -w src/index.jsx -o dist/index.bundle.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src/main.jsx -o dist/main.bundle.js",
+    "dev": "babel -w src/main.jsx -o dist/main.bundle.js"
   },
   "author": "Cédric Meuter",
   "license": "MIT",
