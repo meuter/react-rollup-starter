@@ -1,14 +1,3 @@
-class HelloWorld extends React.Component {
-
-    displayAlert() {
-        alert("Hello " + this.props.name);
-    }
-
-    render() {
-        return <h1 onClick={this.displayAlert.bind(this)}>
-            Hello {this.props.name}
-        </h1>;
-    }
-}
+import HelloWorld from "./components/hello-world.component.jsx";
 
 ReactDOM.render(<HelloWorld name="world!"/>, document.getElementById("app-placeholder"));
