@@ -10,5 +10,6 @@ export default {
             plugins: ["transform-react-jsx"],
             presets: ["es2015-rollup"]
         })
-   ]
+    ],
+    sourceMap: "inline"
 }
