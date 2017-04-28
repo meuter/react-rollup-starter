@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
-        <title></title>
+        <title>React Demo</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react-dom.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.min.js" type="text/javascript"></script>
     </head>
+
     <body>
         <div id="app-placeholder"></div>
     </body>
 
-    <script>
-
-        var appPlaceholder = document.getElementById("app-placeholder");
-
-        appPlaceholder.innerHTML = "Hello World";
-
+    <script type="text/babel">
+        ReactDOM.render(<h1>Hello World</h1>, document.getElementById("app-placeholder"));
     </script>
 
 </html>
