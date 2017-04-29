@@ -5,6 +5,7 @@ import replace from "rollup-plugin-replace";
 import uglify from "rollup-plugin-uglify";
 import livereload from "rollup-plugin-livereload";
 import filesize from "rollup-plugin-filesize";
+import progress from "rollup-plugin-progress";
 
 const NODE_ENV = process.env.NODE_ENV || "development";
 const PROD     = (NODE_ENV === "production");
@@ -20,6 +21,7 @@ export default {
     format: "iife",
     sourceMap: PROD ? false : "inline",
     plugins: [
+        progress(),
         resolve({
             jsnext: true,
             browser: true,
