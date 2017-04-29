@@ -7,9 +7,10 @@ class HelloWorld extends React.Component {
     }
 
     render() {
-        return <h1 onClick={this.displayAlert.bind(this)}>
-            Hello {this.props.name}!!
-        </h1>;
+        return <div className="container">
+            <h1>Hello {this.props.name}<i className="fa fa-check" style={{color:"green"}} aria-hidden="true"></i></h1>
+            <span onClick={this.displayAlert.bind(this)} className="btn btn-primary">Click me!</span>
+        </div>
     }
 }
 

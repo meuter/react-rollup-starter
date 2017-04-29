@@ -3,7 +3,6 @@ import resolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
 import replace from "rollup-plugin-replace";
 import uglify from "rollup-plugin-uglify";
-import serve from "rollup-plugin-serve";
 import livereload from "rollup-plugin-livereload";
 import filesize from "rollup-plugin-filesize";
 
@@ -36,12 +35,6 @@ export default {
             presets: ["es2015-rollup"]
         }),
         (PROD && uglify()),
-        (WATCH && serve({
-            contentBase: "dist",
-            host: "localhost",
-            port: "4200",
-            open: true
-        })),
         (WATCH && livereload()),
         (filesize()),
     ]
